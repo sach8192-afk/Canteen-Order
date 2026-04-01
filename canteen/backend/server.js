@@ -16,7 +16,7 @@ const server = http.createServer(app);
 // Socket.io setup
 const io = new Server(server, {
   cors: {
-    origin: process.env.CLIENT_URL || "http://localhost:8080",
+    origin: process.env.CLIENT_URL || "https://candid-centaur-285b12.netlify.app/",
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
   },
 });
