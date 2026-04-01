@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Playfair+Display:wght@600;700&display=swap');
+
+@layer base {
+  :root {
+    --background: 30 25% 97%;
+    --foreground: 20 20% 12%;
+
+    --card: 30 20% 99%;
+    --card-foreground: 20 20% 12%;
+
+    --popover: 30 20% 99%;
+    --popover-foreground: 20 20% 12%;
+
+    --primary: 24 80% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 30 15% 93%;
+    --secondary-foreground: 20 20% 20%;
+
+    --muted: 30 10% 94%;
+    --muted-foreground: 20 10% 45%;
+
+    --accent: 145 45% 42%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 30 15% 88%;
+    --input: 30 15% 88%;
+    --ring: 24 80% 50%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 20 18% 14%;
+    --sidebar-foreground: 30 15% 90%;
+    --sidebar-primary: 24 80% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 20 15% 20%;
+    --sidebar-accent-foreground: 30 15% 90%;
+    --sidebar-border: 20 12% 22%;
+    --sidebar-ring: 24 80% 50%;
+
+    /* Custom tokens */
+    --success: 145 45% 42%;
+    --success-foreground: 0 0% 100%;
+    --warning: 40 90% 50%;
+    --warning-foreground: 20 20% 12%;
+    --kitchen-preparing: 40 90% 50%;
+    --kitchen-ready: 145 45% 42%;
+
+    --font-display: 'Playfair Display', serif;
+    --font-body: 'DM Sans', sans-serif;
+
+    --shadow-card: 0 2px 12px -2px hsl(20 20% 12% / 0.06);
+    --shadow-card-hover: 0 8px 24px -4px hsl(20 20% 12% / 0.1);
+    --shadow-modal: 0 20px 60px -12px hsl(20 20% 12% / 0.2);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+  h1, h2, h3 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer utilities {
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  .shadow-card-hover {
+    box-shadow: var(--shadow-card-hover);
+  }
+  .shadow-modal {
+    box-shadow: var(--shadow-modal);
+  }
+}
